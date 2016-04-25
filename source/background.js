@@ -4,7 +4,7 @@ var showForPages = ["http://mail.google.com/*","https://mail.google.com/*"];
 // Set up context menu at install time.
 chrome.runtime.onInstalled.addListener(function() {
   var context = "editable";
-  var title = "Paste as HTML";
+  var title = "Append clipboard as HTML";
   var id = chrome.contextMenus.create({"title": title, "contexts":[context],
                                         "documentUrlPatterns":showForPages,
                                         "id": "context" + context });

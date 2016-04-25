@@ -1,6 +1,6 @@
 {
-  "name": "Gmail HTML Paste",
-  "description": "Allows the usage of html content on Gmail",
+  "name": "Gmail Append HTML",
+  "description": "Allows the usage of HTML content in Gmail from the context menu.",
   "version": "0.0.1",
   "permissions": ["contextMenus", "clipboardRead"],
   "manifest_version": 2,

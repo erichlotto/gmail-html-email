@@ -12,9 +12,15 @@ document.addEventListener("mousedown", function(event){
 // On message received
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.action == 'pasteHTML') {
-    insertHtml(clickedEl, getClipboardText());
+    checkIfCanInsertHTML();
   }
 });
+
+function checkIfCanInsertHTML(){
+  if(clickedEl.classList.contains("editable"))
+    insertHtml(clickedEl, getClipboardText());
+  else alert("You can't insert HTML content here");
+}
 
 // Recursively select the text area in case the target points to an inner element
 function getTextArea(elm){
